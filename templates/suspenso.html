@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+      <h1>Peliculas de accion</h1>
+      <div class="table-responsive"></div>
+          <table class="table table-striped">
+              <thead>
+                  <tr>
+                      <th>#</th>
+                      <th>Nombre</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for i in num %}
+                  <tr>
+                      <td>{{i+1}}</td>
+                      <td>{{pS[num[i]]}}</td>
+                  </tr>
+
+                  {% endfor %}
+              </tbody>
+          </table>
+
+  </div>
+</div>
+
+{% endblock %}

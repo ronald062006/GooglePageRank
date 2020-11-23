@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-4 offset-md-3">
+        <h1>Peliculas de accion</h1>
+        <div class="table-responsive"></div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in num %}
+                    <tr>
+                        <td>{{num[i]}}</td>
+                        <td>{{pA[num[i]]}}</td>
+                    </tr>
+
+                    {% endfor %}
+                </tbody>
+            </table>
+
+    </div>
+    <div class="cold-md-4">
+        <h2>Red Nodos</h2>
+        <p><img src="{{ img_user }}" alt=""></p>
+    </div>
+</div>
+
+
+
+{% endblock %}
